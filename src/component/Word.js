@@ -11,7 +11,7 @@ export default function Word({ word: w }) {
 
   function toggleDone() {
     // setIsDone(!isDone);
-    fetch(`http://localhost:3004/words/${word.id}`, {
+    fetch(`http://localhost:3006/words/${word.id}`, {
       // 요청들의 옵션 입력
       method: "PUT",
       headers: {
@@ -32,7 +32,7 @@ export default function Word({ word: w }) {
 
   function del() {
     if (window.confirm("삭제 하시겠습니까?")) {
-      fetch(`http://localhost:3004/words/${word.id}`, {
+      fetch(`http://localhost:3006/words/${word.id}`, {
         method: "DELETE",
       }).then((res) => {
         if (res.ok) {
